@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+:root{
+    --primary-white: #F5F4F4;
+    --primary-black:  #2B2837;
+    --light-gray: #F5F5F5;
+    --dark-gray: #B4B3B6;
+    --success-green: #4AD991;
+    --cancel-reed: #FF7285;
+    --shadow-color: #F0F0F7;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--primary-white);
+    font-family: 'Roboto', sans-serif;
+}
+
+p
+{
+    font-size: 1.6rem;
+}
+
+main
+{
+    width: 80%;
+    margin: 80px auto 0;
+}
+
+.Title
+{
+    font-size: 4.8rem;
+    text-align: center;
+}
+
+.Search
+{
+    height: 60px;
+    margin-top: 50px;
+    display: flex;
+}
+
+.Search__Form
+{
+    height: 100%;
+    width: 90%;
+    border: 3px solid var(--dark-gray);
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    box-shadow: -6px 6px 5px 4px #F0F0F7;
+    
+}
+
+.Search__Input:focus 
+{
+    outline: none;
+}
+
+.Search__Icon
+{
+    width: 30px;
+    margin: 0 20px;
+    
+}
+
+.Search__Input
+{
+    height: 40px;
+    width: 100%;
+    border: 0px;
+    
+}
+
+.Search__PlusButton
+{
+    width: 30px;
+    margin: 0 30px;
+    
+    
+}
+
+.TasksContainer
+{
+    margin-top: 50px;
+}
+
+
+.Task
+{
+    height: 50px;
+    width: 100%;
+    border: 1px solid var(--dark-gray);
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;  
+    border-radius: 5px;
+    box-shadow: -6px 6px 5px 4px #F0F0F7;
+}
+
+.Task__CheckIcon
+{
+    margin: 0 20px;
+    width: 20px;
+}
+
+.Task__Description
+{
+    width: 100%;
+    
+}
+
+.Task__DeleteIcon
+{
+    margin: 0 20px;
+    width: 20px;
+}
