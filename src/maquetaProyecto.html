@@ -16,7 +16,7 @@
                 <input type="search" id="SearchForm" class="Search__Input" placeholder="Busca tu tarea aquí">
             </div>
             <img src="./plusIcon.svg"
-            class="Search__PlusButton">
+            class="Search__PlusButton" id="AddButton">
         </div>
 
 
@@ -30,15 +30,39 @@
             </div>
         </div>
 
-        <!-
     </main> 
+    <!-- Modal --> 
+    <div class="Modal" id="modal">
+        <div class="Modal__Content">
+            <img src="./closeButton.svg" alt="" id="closeButton"  class="Modal__CloseButtonIcon">
+            <div class="CreateTodo">
+                <p class="CreateTodo__Title">Escribe un nuevo To-Do</p>
+                <textarea class="CreateTodo__TextArea">
+                </textarea>
+                <div class="CreateTodo__Buttons">
+                    <button class="CreateTodo__Cancel" type="button">Cancelar</button>
+                    <button class="CreateTodo__Accept" type="button">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script>
     searchButton = document.getElementById("test");
-    
+    closeButton = document.getElementById("closeButton");
+    addButton = document.getElementById("AddButton");
+    closeButton.addEventListener("click", () => {
+        modal = document.getElementById("modal");
+        modal.style.display = "none";
+    })
     searchButton.addEventListener("click",()=>{
         console.log("holis");
         document.getElementById("SearchForm").focus();
+    })
+    addButton.addEventListener("click", ()=>
+    {
+        modal = document.getElementById("modal");
+        modal.style.display = "initial";
     })
 </script>
 </html>
