@@ -1,9 +1,10 @@
 import { TodoCounter } from '../TodoCounter';
 import { TodoSearch } from '../TodoSearch';
+import { TodoTaskList } from '../TodoTaskList';
 
 function App ()
 {
-  const Todos = [ 
+  const todos = [ 
     {
       description: "Cortar cebollas",
       completed: false
@@ -21,9 +22,16 @@ function App ()
   return(
     <div>
       <TodoCounter
-        doneTodos = { Todos.filter( Todo => Todo.completed).length } 
+        doneTodos = { todos.filter( Todo => Todo.completed).length } 
+        totalTodos = { todos.length }
       />
       <TodoSearch/>
+      {
+        todos.map( (todo) => {
+          return <TodoTaskList todoTask = {todo}/>;
+        })
+      }
+      
     </div>
   );
 };

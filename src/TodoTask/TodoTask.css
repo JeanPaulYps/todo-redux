@@ -1,0 +1,30 @@
+.Task
+{
+    height: 50px;
+    width: 100%;
+    border: 1px solid var(--dark-gray);
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;  
+    border-radius: 5px;
+    box-shadow: -6px 6px 5px 4px #F0F0F7;
+}
+
+.Task__CheckIcon
+{
+    margin: 0 20px;
+    width: 20px;
+}
+
+.Task__Description
+{
+    width: 100%;
+    
+}
+
+.Task__DeleteIcon
+{
+    margin: 0 20px;
+    width: 20px;
+}

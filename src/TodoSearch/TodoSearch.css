@@ -1,0 +1,50 @@
+.Search
+{
+    height: 60px;
+    margin-top: 50px;
+    display: flex;
+}
+
+.Search__Form
+{
+    height: 100%;
+    width: 90%;
+    border: 3px solid var(--dark-gray);
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    box-shadow: -6px 6px 5px 4px #F0F0F7;
+    
+}
+
+.Search__Input:focus 
+{
+    outline: none;
+}
+
+.Search__Icon
+{
+    width: 30px;
+    margin: 0 20px;
+    
+}
+
+.Search__Input
+{
+    height: 40px;
+    width: 100%;
+    border: 0px;
+    
+}
+
+.Search__PlusButton
+{
+    width: 30px;
+    margin: 0 30px;
+}
+
+
+.Search__PlusButton:hover
+{
+    cursor: pointer; 
+}
