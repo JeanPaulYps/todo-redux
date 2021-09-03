@@ -2,8 +2,7 @@
 
 function App() {
   return (
-    <TodoCounter/>
-    <TodoSearch/>
+    <h1>Hola Mundo</h1>
     
   );
 }
