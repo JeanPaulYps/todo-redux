@@ -1,10 +1,14 @@
+import React from 'react';
+import { TodoContext } from '../TodoContext';
 import './TodoSearch.css'
 
-function TodoSearch (props){
+function TodoSearch (){
+
+    const { setOpenModal } = React.useContext(TodoContext);
     
     const onClickButton = ()=>
     {
-        props.setOpenModal( prevState => !prevState )
+        setOpenModal( prevState => !prevState )
     }
 
     return (

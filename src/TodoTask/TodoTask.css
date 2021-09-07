@@ -34,6 +34,11 @@
     width: 20px;
 }
 
+.Task__DeleteIcon:hover
+{
+    cursor: pointer;
+}
+
 .Task__Check {
     display: none;
 }
