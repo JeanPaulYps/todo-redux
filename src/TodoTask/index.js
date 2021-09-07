@@ -2,9 +2,11 @@ import './TodoTask.css'
 
 
 function TodoTask(props) {
+
     return (
             <div className="Task">
-                <img src={process.env.PUBLIC_URL + '/checkIcon.svg'} alt="" className="Task__CheckIcon" />
+                <img src={process.env.PUBLIC_URL + '/checkIcon.svg'} alt="" className="Task__CheckIcon" onClick={ () => props.markTaskAsDone(props.taskDescription) }/>
+                <input class="Task__Check" type="checkbox" value="" checked={props.isDone}/>
                 <div className="Task__Description">
                     <p>{props.taskDescription}</p>
                 </div>

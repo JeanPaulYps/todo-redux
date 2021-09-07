@@ -17,6 +17,11 @@
     width: 20px;
 }
 
+.Task__CheckIcon:hover
+{
+    cursor: pointer; 
+}
+
 .Task__Description
 {
     width: 100%;
@@ -27,4 +32,13 @@
 {
     margin: 0 20px;
     width: 20px;
+}
+
+.Task__Check {
+    display: none;
+}
+
+.Task__Check:checked + div > p 
+{
+ text-decoration: line-through;
 }
