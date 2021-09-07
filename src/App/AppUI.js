@@ -8,7 +8,7 @@ import React from 'react';
 function AppUI() {
     const { openModal,
         setOpenModal,
-        todos,
+        searchedTodos,
         checkTask
     } = React.useContext(TodoContext);
 
@@ -19,7 +19,7 @@ function AppUI() {
             <TodoCounter />
             <TodoSearch />
     
-            {todos.map( (todo) => {
+            {searchedTodos.map( (todo) => {
                     return <TodoTaskList todoTask={todo} markTaskAsDone={checkTask} />;
                 })
             }
