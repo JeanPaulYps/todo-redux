@@ -4,7 +4,7 @@ import './TodoSearch.css'
 
 function TodoSearch (){
 
-    const { setOpenModal, searchTodos, searchedTodos } = React.useContext(TodoContext);
+    const { setOpenModal, setSearchText } = React.useContext(TodoContext);
     
     const onClickButton = ()=>
     {
@@ -13,9 +13,7 @@ function TodoSearch (){
 
     const onChangeInSearch = (event) =>
     {
-        searchTodos(event.target.value);
-        console.log(searchedTodos);
-        console.log(event);
+        setSearchText(event.target.value);
     }
 
     return (

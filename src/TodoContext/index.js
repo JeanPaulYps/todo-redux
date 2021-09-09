@@ -38,12 +38,10 @@ function TodoProvider (props)
       setTodos(newTodos);
     }
 
-    const [searchedTodos, setSearchedTodos] = React.useState(todos);
+    const [searchText, setSearchText] = React.useState('');
 
-    const searchTodos = (searchText) => {
-      const newSearchedTodos = todos.filter((todo) => todo.description.toLowerCase().includes(searchText.toLowerCase()));
-      setSearchedTodos(newSearchedTodos);
-    }
+    const searchedTodos = todos.filter((todo) => todo.description.toLowerCase().includes(searchText.toLowerCase()));
+
 
     const completedTodos = todos.filter( Todo => Todo.completed).length;
     const totalTodos = todos.length;
@@ -58,8 +56,9 @@ function TodoProvider (props)
           setTodos,
           checkTask,
           deleteTask,
-          searchTodos,
-          searchedTodos
+          searchText,
+          setSearchText,
+          searchedTodos,
         } }>
             {props.children}
         </TodoContext.Provider>
