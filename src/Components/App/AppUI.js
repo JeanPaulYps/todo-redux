@@ -4,6 +4,7 @@ import { TodoContext } from '../TodoContext';
 import { TodoModal } from '../TodoModal';
 import { TodoTaskList } from '../TodoTaskList';
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 function AppUI() {
     const { openModal,
@@ -12,6 +13,8 @@ function AppUI() {
         checkTask
     } = React.useContext(TodoContext);
 
+    const todosList = useSelector(state => state.todo.todoList );
+
 
 
     return (
@@ -19,10 +22,18 @@ function AppUI() {
             <TodoCounter />
             <TodoSearch />
     
-            {searchedTodos.map( (todo) => {
+            {/* {
+                searchedTodos.map( (todo) => {
+                    return <TodoTaskList todoTask={todo} markTaskAsDone={checkTask} />;
+                })
+            } */}
+            { console.log(todosList) }
+            {
+                todosList.map( (todo) => {
                     return <TodoTaskList todoTask={todo} markTaskAsDone={checkTask} />;
                 })
             }
+
             {openModal && <TodoModal setOpenModal={setOpenModal} />}
         </div>
     );
