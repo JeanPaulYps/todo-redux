@@ -3,10 +3,10 @@ import ReactDom from 'react-dom';
 import  { Modal } from './Modal'
 
 
-function TodoModal (props)
+function TodoModal ()
 {
     return ReactDom.createPortal(
-        <Modal setOpenModal = {props.setOpenModal} /> ,
+        <Modal /> ,
         document.getElementById('Modal')
     );   
 }

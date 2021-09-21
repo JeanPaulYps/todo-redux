@@ -1,7 +1,5 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { TodoContext } from '../TodoContext';
-import './todoCounter.css'
+import './todoCounter.css';
 
 function TodoCounter ( {todosList} ){
     const totalTodos = todosList.length;

@@ -1,21 +1,27 @@
 import React from 'react';
-import { TodoContext } from '../TodoContext';
+import { useDispatch } from 'react-redux';
 import './Modal.css';
+import { addTaskModalSlice } from '../../Reducers/ModalSlice';
+import { toDoSlice } from '../../Reducers/ToDoSlice';
 
-function Modal(props) {
-    const {addTask} = React.useContext(TodoContext);
+
+function Modal() {
+    // const {addTask} = React.useContext(TodoContext);
     const [taskDescription, setTaskDescription ]= React.useState('');
+    
+    const dispatch = useDispatch();
+    const { changeVisibilityOfModal } = addTaskModalSlice.actions;
+    const { addTask } = toDoSlice.actions;
 
     const onClickCloseButton = () => 
     {
-        props.setOpenModal( prevState => !prevState )
+       dispatch(changeVisibilityOfModal());
     }
 
     const handleSubmit = (event) => 
     {
-        addTask(taskDescription);
-        props.setOpenModal( prevState => !prevState);
-        
+        dispatch(addTask(taskDescription));
+        dispatch(changeVisibilityOfModal());
     }
 
     const saveTaskDescription = (event) =>
@@ -25,7 +31,7 @@ function Modal(props) {
 
 
     return (
-        <div className="Modal" id="modal">
+        <div className="Modal" id="modal" >
             <div className="Modal__Content">
                 <img src={process.env.PUBLIC_URL + "/closeButton.svg"} alt="" onClick= { onClickCloseButton } className="Modal__CloseButtonIcon"/>
                 <div className="CreateTodo">
