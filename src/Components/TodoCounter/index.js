@@ -1,9 +1,11 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { TodoContext } from '../TodoContext';
 import './todoCounter.css'
 
-function TodoCounter (){
-    const { totalTodos, completedTodos } = React.useContext(TodoContext);
+function TodoCounter ( {todosList} ){
+    const totalTodos = todosList.length;
+    const completedTodos = todosList.filter( todo => todo.completed).length;
 
     return (
         <h1 class="Title">Haz completado {completedTodos} de {totalTodos} tareas </h1>

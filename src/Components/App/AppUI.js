@@ -19,7 +19,7 @@ function AppUI() {
 
     return (
         <div>
-            <TodoCounter />
+            <TodoCounter todosList = {todosList} />
             <TodoSearch />
     
             {/* {
