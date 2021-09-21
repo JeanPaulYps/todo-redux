@@ -1,5 +1,4 @@
 import { AppUI } from './AppUI';
-import { TodoProvider } from '../TodoContext';
 import React from 'react';
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
@@ -19,10 +18,8 @@ const store = configureStore({
 function App ()
 {
   return(
-    <Provider store = { store }>
-      <TodoProvider>
+    <Provider store = { store }>  
         <AppUI/>
-      </TodoProvider>
     </Provider>
   );
 };
