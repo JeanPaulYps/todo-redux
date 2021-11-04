@@ -6,7 +6,6 @@ import { toDoSlice } from '../../Reducers/ToDoSlice';
 
 
 function Modal() {
-    // const {addTask} = React.useContext(TodoContext);
     const [taskDescription, setTaskDescription ]= React.useState('');
     
     const dispatch = useDispatch();
